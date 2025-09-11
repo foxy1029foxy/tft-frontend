@@ -1,4 +1,4 @@
-// src/components/EffectsIconPlot.jsx
+// src/components/EffectsIconPlot.jsx (PNG→WEBP 置換版)
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import * as XLSX from "xlsx";
 
@@ -156,11 +156,11 @@ function pickSheetName(wb) {
 
 /* ===== 画像ヘルパ ===== */
 const IMG = {
-  champion: (id) => `/assets/champions/${id}.png`,
-  star: () => "/assets/star/star.png",
+  champion: (id) => `/assets/champions/${id}.webp`,
+  star: () => "/assets/star/star.webp",
 };
 function itemFileCandidates(feature) {
-  const raw = String(feature || "").trim().replace(/\.png$/i, "");
+  const raw = String(feature || "").trim().replace(/\.(png|webp)$/i, "");
   const cand = [];
   if (/^TFT\d*_?[_]?Item_/i.test(raw)) cand.push(raw);
   const base = raw.replace(/^((tft\d*|radiant|ornn)?_)?item_/i, "");
@@ -176,7 +176,7 @@ function itemFileCandidates(feature) {
 }
 const ItemIcon = React.memo(function ItemIcon({ feature, left, top, size, title }) {
   const candidates = itemFileCandidates(feature);
-  const src = candidates.length ? `/assets/items/${candidates[0]}.png` : "";
+  const src = candidates.length ? `/assets/items/${candidates[0]}.webp` : "";
   return (
     <img
       src={src}
@@ -186,9 +186,9 @@ const ItemIcon = React.memo(function ItemIcon({ feature, left, top, size, title 
       style={{ left, top, width: size, height: size, filter: "saturate(0.9)" }}
       title={title}
       onError={(e) => {
-        const i = candidates.indexOf((e.currentTarget.src || "").split("/").pop()?.replace(".png", ""));
+        const i = candidates.indexOf((e.currentTarget.src || "").split("/").pop()?.replace(".webp", ""));
         const next = candidates[i + 1];
-        if (next) e.currentTarget.src = `/assets/items/${next}.png`;
+        if (next) e.currentTarget.src = `/assets/items/${next}.webp`;
         else e.currentTarget.style.display = "none";
       }}
     />
@@ -676,7 +676,7 @@ function DetailHeader({ label, detailKey, totalN }) {
       <div className="flex items-center gap-3">
         {detailKey && (
           <img
-            src={`/assets/champions/${detailKey.split("__S")[0]}.png`}
+            src={`/assets/champions/${detailKey.split("__S")[0]}.webp`}
             alt=""
             className="h-10 w-10 rounded-lg object-cover border border-white/20"
             loading="lazy"
@@ -690,7 +690,7 @@ function DetailHeader({ label, detailKey, totalN }) {
           <div className="flex items-center gap-1 mt-1">
             {detailKey &&
               Array.from({ length: Number(detailKey.split("__S")[1]) || 1 }).map((_, i) => (
-                <img key={i} src="/assets/star/star.png" alt="" className="h-4 w-4" />
+                <img key={i} src="/assets/star/star.webp" alt="" className="h-4 w-4" />
               ))}
           </div>
         </div>
@@ -904,7 +904,7 @@ function RowCombobox({ options, value, onChange, className = "" }) {
             {selected ? (
               <>
                 <img
-                  src={`/assets/champions/${selected.id}.png`}
+                  src={`/assets/champions/${selected.id}.webp`}
                   alt=""
                   className="h-4 w-4 rounded-sm object-cover border"
                   loading="lazy"
@@ -947,7 +947,7 @@ function RowCombobox({ options, value, onChange, className = "" }) {
                   className="flex items-center gap-2"
                 >
                   <img
-                    src={`/assets/champions/${opt.id}.png`}
+                    src={`/assets/champions/${opt.id}.webp`}
                     alt=""
                     className="h-5 w-5 rounded-sm object-cover border"
                     loading="lazy"
