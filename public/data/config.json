@@ -1,0 +1,29 @@
+{
+  "patchLabel": "Patch 15.4 update 2025-09-11",
+  "minTotalN": 1000,
+
+  "supportGates": {
+    "normal": { "floor": 60, "pct": 0.01,  "cap": 200 },
+    "rare":   { "floor": 40, "pct": 0.004, "cap": 100, "soft_min": 15, "soft_ci_high_neg": -0.2 }
+  },
+
+  "targets": [
+    { "id": "TFT15_Ashe",  "stars": [2] },
+    { "id": "TFT15_Jinx",   "stars": [2] },
+    { "id": "TFT15_Yuumi",   "stars": [2] },
+    { "id": "TFT15_Leona",  "stars": [2] }
+  ],
+
+   "detailPlot": {
+    "xMin": -0.5,
+    "xMax":  0.5,
+    "clamp": { "left": true, "right": true },
+    "tailsLabel": { "left": "≤ -0.5", "right": "≥ 0.5" }
+  }
+
+  
+
+ 
+   
+  
+}
