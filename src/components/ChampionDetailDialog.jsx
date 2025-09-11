@@ -1,20 +1,26 @@
-// src/components/ChampionDetailDialog.jsx
+// src/components/ChampionDetailDialog.jsx（.png→.webp 置換版・そのまま差し替え可）
 import React, { useMemo } from "react";
 import {
-  Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription,
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
 } from "./ui/dialog";
 
+// 画像拡張子を .webp に統一
 const IMG = {
-  champion: (id) => `/assets/champions/${id}.png`,
-  star: () => "/assets/star/star.png",
+  champion: (id) => `/assets/champions/${id}.webp`,
+  star: () => "/assets/star/star.webp",
 };
+
 const displayNameFromId = (id) =>
-  (String(id || "").split("_").pop() || String(id || ""));
+  String(id || "").split("_").pop() || String(id || "");
 
 export default function ChampionDetailDialog({
   open,
   onOpenChange,
-  championKey,   // 例: "TFT15_Senna__S3"
+  championKey, // 例: "TFT15_Senna__S3"
   patchLabel = "Patch",
 }) {
   const meta = useMemo(() => {
