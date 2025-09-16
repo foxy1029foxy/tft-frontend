@@ -17,7 +17,7 @@ export default function LandingPage() {
           <div className="grid grid-cols-[auto,1fr] items-start">
             {/* 左：タイトル */}
             <h1 className="m-0 font-sans font-semibold tracking-tight leading-tight text-[15px] whitespace-nowrap mr-[20ch]">
-              TEAMFIGHT TACTICS MOTOR LEARNING
+              TEAMFIGHT TACTICS AI分析
             </h1>
 
             {/* 右：説明文＋read more */}
@@ -26,7 +26,7 @@ export default function LandingPage() {
                 {/* 説明文 */}
                 <div className="flex-1">
                   <p className="m-0 text-[15px] leading-6">
-                    試合ログを機械学習で解析し、キャリーに積んだ各アイテムの影響を
+                    試合ログをAI（機械学習）で解析し、キャリーに積んだ各アイテムの影響を
                     「順位がどれだけ上下するか」を指標に推定しています。
                   </p>
                   <p className="m-0 text-[15px] leading-6 mt-1">
@@ -59,7 +59,7 @@ export default function LandingPage() {
                         "
                       >
                         <Dialog.Title className="text-lg font-semibold">
-                          機械学習方法（コンセプト解説）
+                          AI(機械学習）方法
                         </Dialog.Title>
 
                         <ScrollArea className="mt-4 flex-1 pr-3 overflow-y-auto">
