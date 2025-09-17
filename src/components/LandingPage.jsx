@@ -17,7 +17,7 @@ export default function LandingPage() {
           <div className="grid grid-cols-[auto,1fr] items-start">
             {/* 左：タイトル */}
             <h1 className="m-0 font-sans font-semibold tracking-tight leading-tight text-[15px] whitespace-nowrap mr-[20ch]">
-              TEAMFIGHT TACTICS AI分析
+              TEAMFIGHT TACTICS    AI分析
             </h1>
 
             {/* 右：説明文＋read more */}
