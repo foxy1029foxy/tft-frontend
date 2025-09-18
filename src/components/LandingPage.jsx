@@ -197,7 +197,7 @@ export default function LandingPage() {
       {/* ===== FOOTER ===== */}
       <footer className="mx-auto max-w-[92vw] mt-12 border-t border-neutral-200 py-6 text-center text-xs text-neutral-600">
         <p>
-          © 2025 サイト名. TFTips.app isn't endorsed by Riot Games and doesn't reflect
+          © 2025 tftmortorlearnig.tftmortorlearing isn't endorsed by Riot Games and doesn't reflect
           the views or opinions of Riot Games or anyone officially involved in producing or
           managing Riot Games properties. Riot Games, and all associated properties are
           trademarks or registered trademarks of Riot Games, Inc.
@@ -251,7 +251,7 @@ export default function LandingPage() {
                 <Dialog.Title className="text-lg font-semibold mb-4">Terms of Service</Dialog.Title>
                 <ScrollArea className="max-h-[70vh] pr-3">
                   <div className="space-y-3 text-left text-[15px] leading-6 text-neutral-800">
-                    <p>By using TFTips.app, you agree to use the site only for lawful purposes.</p>
+                    <p>By using tftmortorlearning, you agree to use the site only for lawful purposes.</p>
                     <p>We provide this service “as is” without any warranties. We are not liable for any losses or damages arising from the use of this site.</p>
                     <p>All intellectual property rights related to Riot Games are owned by Riot Games, Inc. This site is a fan-made tool and not affiliated with Riot Games.</p>
                     <p>We may update these terms at any time. Continued use of the site constitutes acceptance of the new terms.</p>
